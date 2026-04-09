@@ -18,7 +18,7 @@ Visual Studio를 이용한 UI 디자인
 
 <img width="1087" height="624" alt="주문하기" src="https://github.com/user-attachments/assets/c5c226b9-c1cc-41c9-b47f-be6d50b7f4a3" />
 
--원하는 메뉴를 선택 후 주문하기 버튼을 눌렀을 때
+- 원하는 메뉴를 선택 후 주문하기 버튼을 눌렀을 때
 
 <img width="1085" height="627" alt="초기화" src="https://github.com/user-attachments/assets/bd4a9ea1-a34e-4a0b-b812-3aa3b547b82c" />
 
