@@ -3,7 +3,7 @@ namespace BurgerKiosk
     public partial class Form1 : Form
     {
         private int totalCost = 0;
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -73,19 +73,22 @@ namespace BurgerKiosk
             rdoHamBurger.Checked = false;
             rdoBulgogiBurger.Checked = false;
             rdoChickenBurger.Checked = false;
-        
+
             // 체크박스 초기화
             chkFrenchFri.Checked = false;
             chkCola.Checked = false;
             chkCheese.Checked = false;
             chkSauce.Checked = false;
-        
+
             // 주문 내역 초기화
             lstOrder.Items.Clear();
-        
+
             // 총 금액 초기화
             totalCost = 0;
             lblTotalCost.Text = "총 금액 : 0원";
+
+            // 포커스를 메뉴선택 그룹박스로 이동
+            rdoHamBurger.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)
