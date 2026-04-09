@@ -3,6 +3,7 @@ namespace BurgerKiosk
     public partial class Form1 : Form
     {
         private int totalCost = 0;
+        
         public Form1()
         {
             InitializeComponent();
@@ -28,9 +29,11 @@ namespace BurgerKiosk
             // 버거 선택 확인
             if (!rdoHamBurger.Checked && !rdoBulgogiBurger.Checked && !rdoChickenBurger.Checked)
             {
-                MessageBox.Show("버거를 선택해주세요!", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblWarning.Text = "버거를 선택해주세요!";
                 return;
             }
+
+            lblWarning.Text = "";
 
             // 초기화
             totalCost = 0;
