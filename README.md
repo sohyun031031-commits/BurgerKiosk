@@ -16,9 +16,9 @@ Visual Studio를 이용한 UI 디자인
 모두 고르고 주문하기 버튼을 누르면 알아서 선택한 모든 메뉴의 가격을 합산하여 알려줌
 
 새로운 메뉴를 고르고 싶을 때는 초기화 버튼을 누르면 모두 삭제됨
-.
-.
-.
+
+
+
 실행화면 (과제1)
 과제1 코드의 실행 스크린샷 (사진**) 
 <img width="1083" height="623" alt="첫화면" src="https://github.com/user-attachments/assets/2c46a646-8b5b-4de6-9d38-16ced9ecb53e" />
@@ -35,9 +35,8 @@ Visual Studio를 이용한 UI 디자인
 
 구현한 내용 (위 그림 참조)
 
-.
-.
-.
+
+
 실행화면 (과제2)
 과제2 코드의 실행 스크린샷 (사진**) 
 <img width="1080" height="628" alt="메뉴선택x오류메세지" src="https://github.com/user-attachments/assets/9d7dc9f9-d4dc-4665-9fb6-ebf1d59ff236" />
@@ -46,17 +45,15 @@ Visual Studio를 이용한 UI 디자인
 
 구현한 내용 (위 그림 참조)
 
-.
-.
-.
+
+
 실행화면 (과제3)
 과제3 코드의 실행 스크린샷 (사진**)
 
 구현한 내용 (위 그림 참조)
 
-.
-.
-.
+
+
 실행화면 (과제4)
 과제4 코드의 실행 스크린샷 (사진**)
 
