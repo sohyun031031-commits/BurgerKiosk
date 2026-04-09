@@ -149,5 +149,39 @@ namespace BurgerKiosk
 
             MessageBox.Show(details, "계산 내역", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void lstOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // 실시간 업데이트 메서드 (공통으로 사용)
+        private void UpdateOrder()
+        {
+            totalCost = 0;
+            lstOrder.Items.Clear();
+
+            if (rdoHamBurger.Checked) { lstOrder.Items.Add("햄버거 - 5,000원"); totalCost += 5000; }
+            else if (rdoBulgogiBurger.Checked) { lstOrder.Items.Add("불고기버거 - 4,000원"); totalCost += 4000; }
+            else if (rdoChickenBurger.Checked) { lstOrder.Items.Add("치킨버거 - 3,000원"); totalCost += 3000; }
+
+            if (chkFrenchFri.Checked) { lstOrder.Items.Add("감자튀김 - 3,500원"); totalCost += 3500; }
+            if (chkCola.Checked) { lstOrder.Items.Add("콜라 - 2,500원"); totalCost += 2500; }
+            if (chkCheese.Checked) { lstOrder.Items.Add("치즈 - 1,500원"); totalCost += 1500; }
+            if (chkSauce.Checked) { lstOrder.Items.Add("소스 - 500원"); totalCost += 500; }
+
+            lblTotalCost.Text = $"총 금액 : {totalCost:N0}원";
+        }
+
+        // 라디오버튼 이벤트
+        private void rdoHamBurger_CheckedChanged(object sender, EventArgs e) { UpdateOrder(); }
+        private void rdoBulgogiBurger_CheckedChanged(object sender, EventArgs e) { UpdateOrder(); }
+        private void rdoChickenBurger_CheckedChanged(object sender, EventArgs e) { UpdateOrder(); }
+
+        // 체크박스 이벤트 (기존 빈 메서드 대체)
+        private void checkCola_CheckedChanged(object sender, EventArgs e) { UpdateOrder(); } // 콜라
+        private void checkSauce_CheckedChanged(object sender, EventArgs e) { UpdateOrder(); } // 소스
+        private void chkFrenchFri_CheckedChanged(object sender, EventArgs e) { UpdateOrder(); }
+        private void chkCheese_CheckedChanged(object sender, EventArgs e) { UpdateOrder(); }
     }
 }
