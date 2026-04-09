@@ -2,6 +2,7 @@ namespace BurgerKiosk
 {
     public partial class Form1 : Form
     {
+        private int totalCost = 0;
         public Form1()
         {
             InitializeComponent();
@@ -75,47 +76,20 @@ namespace BurgerKiosk
 
         private void lblTotalCost_Click(object sender, EventArgs e)
         {
-            namespace BurgerKiosk
-    {
-        public partial class Form1 : Form
-        {
-            private int totalCost = 0; // 총 비용 필드 추가
+            string details = "=== 주문 내역 ===\n";
 
-            public Form1()
-            {
-                InitializeComponent();
-            }
+            if (rdoHamBurger.Checked) details += "햄버거: 5,000원\n";
+            else if (rdoBulgogiBurger.Checked) details += "불고기버거: 4,000원\n";
+            else if (rdoChickenBurger.Checked) details += "치킨버거: 3,000원\n";
 
-            private void lblTotalCost_Click(object sender, EventArgs e)
-            {
-                string details = "=== 주문 내역 ===\n";
+            if (chkFrenchFri.Checked) details += "감자튀김: 3,500원\n";
+            if (chkCola.Checked) details += "콜라: 2,500원\n";
+            if (chkCheese.Checked) details += "치즈: 1,500원\n";
+            if (chkSauce.Checked) details += "소스: 500원\n";
 
-                // 버거 종류
-                if (rdoHamBurger.Checked)
-                    details += "햄버거: 5,000원\n";
-                else if (rdoBulgogiBurger.Checked)
-                    details += "불고기버거: 4,000원\n";
-                else if (rdoChickenBurger.Checked)
-                    details += "치킨버거: 3,000원\n";
+            details += $"\n합계: {totalCost:N0}원";
 
-                // 사이드 메뉴
-                details += "\n=== 추가 옵션 ===\n";
-
-                if (chkFrenchFri.Checked)
-                    details += "감자튀김: 3,500원\n";
-                if (chkCola.Checked)
-                    details += "콜라: 2,500원\n";
-                if (chkCheese.Checked)
-                    details += "치즈: 1,500원\n";
-                if (chkSauce.Checked)
-                    details += "소스: 500원\n";
-
-                details += $"\n================\n합계: {totalCost:N0}원";
-
-                MessageBox.Show(details, "계산 내역", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            MessageBox.Show(details, "계산 내역", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    }
-}
     }
 }
