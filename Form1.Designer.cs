@@ -80,6 +80,7 @@ namespace BurgerKiosk
             rdoHamBurger.TabStop = true;
             rdoHamBurger.Text = "햄버거";
             rdoHamBurger.UseVisualStyleBackColor = true;
+            rdoHamBurger.CheckedChanged += rdoHamBurger_CheckedChanged;
             // 
             // rdoChickenBurger
             // 
@@ -93,6 +94,7 @@ namespace BurgerKiosk
             rdoChickenBurger.TabStop = true;
             rdoChickenBurger.Text = "치킨버거";
             rdoChickenBurger.UseVisualStyleBackColor = true;
+            rdoChickenBurger.CheckedChanged += rdoChickenBurger_CheckedChanged;
             // 
             // rdoBulgogiBurger
             // 
@@ -106,6 +108,7 @@ namespace BurgerKiosk
             rdoBulgogiBurger.TabStop = true;
             rdoBulgogiBurger.Text = "불고기버거";
             rdoBulgogiBurger.UseVisualStyleBackColor = true;
+            rdoBulgogiBurger.CheckedChanged += rdoBulgogiBurger_CheckedChanged;
             // 
             // pictureBox1
             // 
@@ -167,7 +170,7 @@ namespace BurgerKiosk
             chkSauce.TabIndex = 3;
             chkSauce.Text = "소스 추가";
             chkSauce.UseVisualStyleBackColor = true;
-            chkSauce.CheckedChanged += checkBox4_CheckedChanged;
+            chkSauce.CheckedChanged += checkSauce_CheckedChanged;
             // 
             // chkCheese
             // 
@@ -180,6 +183,7 @@ namespace BurgerKiosk
             chkCheese.TabIndex = 2;
             chkCheese.Text = "치즈 추가";
             chkCheese.UseVisualStyleBackColor = true;
+            chkCheese.CheckedChanged += chkCheese_CheckedChanged;
             // 
             // chkCola
             // 
@@ -192,7 +196,7 @@ namespace BurgerKiosk
             chkCola.TabIndex = 1;
             chkCola.Text = "콜라";
             chkCola.UseVisualStyleBackColor = true;
-            chkCola.CheckedChanged += checkBox2_CheckedChanged;
+            chkCola.CheckedChanged += checkCola_CheckedChanged;
             // 
             // chkFrenchFri
             // 
@@ -205,6 +209,7 @@ namespace BurgerKiosk
             chkFrenchFri.TabIndex = 0;
             chkFrenchFri.Text = "감자튀김";
             chkFrenchFri.UseVisualStyleBackColor = true;
+            chkFrenchFri.CheckedChanged += chkFrenchFri_CheckedChanged;
             // 
             // rdoBulgogiHamBurger
             // 
@@ -257,6 +262,7 @@ namespace BurgerKiosk
             lstOrder.Name = "lstOrder";
             lstOrder.Size = new Size(267, 179);
             lstOrder.TabIndex = 0;
+            lstOrder.SelectedIndexChanged += lstOrder_SelectedIndexChanged;
             // 
             // btnOrder
             // 
