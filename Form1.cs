@@ -25,12 +25,64 @@ namespace BurgerKiosk
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            // 버거 선택 확인
+            if (!rdoHamBurger.Checked && !rdoBulgogiBurger.Checked && !rdoChickenBurger.Checked)
+            {
+                MessageBox.Show("버거를 선택해주세요!", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 초기화
+            totalCost = 0;
+            lstOrder.Items.Clear();
+
+            // 버거 종류
+            if (rdoHamBurger.Checked)
+            {
+                lstOrder.Items.Add("햄버거 - 5,000원");
+                totalCost += 5000;
+            }
+            else if (rdoBulgogiBurger.Checked)
+            {
+                lstOrder.Items.Add("불고기버거 - 4,000원");
+                totalCost += 4000;
+            }
+            else if (rdoChickenBurger.Checked)
+            {
+                lstOrder.Items.Add("치킨버거 - 3,000원");
+                totalCost += 3000;
+            }
+
+            // 추가 옵션
+            if (chkFrenchFri.Checked) { lstOrder.Items.Add("감자튀김 - 3,500원"); totalCost += 3500; }
+            if (chkCola.Checked) { lstOrder.Items.Add("콜라 - 2,500원"); totalCost += 2500; }
+            if (chkCheese.Checked) { lstOrder.Items.Add("치즈 - 1,500원"); totalCost += 1500; }
+            if (chkSauce.Checked) { lstOrder.Items.Add("소스 - 500원"); totalCost += 500; }
+
+            // 총 금액 표시
+            lblTotalCost.Text = $"총 금액 : {totalCost:N0}원";
 
         }
 
         private void btnInit_Click(object sender, EventArgs e)
         {
-
+            // 라디오버튼 초기화
+            rdoHamBurger.Checked = false;
+            rdoBulgogiBurger.Checked = false;
+            rdoChickenBurger.Checked = false;
+        
+            // 체크박스 초기화
+            chkFrenchFri.Checked = false;
+            chkCola.Checked = false;
+            chkCheese.Checked = false;
+            chkSauce.Checked = false;
+        
+            // 주문 내역 초기화
+            lstOrder.Items.Clear();
+        
+            // 총 금액 초기화
+            totalCost = 0;
+            lblTotalCost.Text = "총 금액 : 0원";
         }
 
         private void Form1_Load(object sender, EventArgs e)
